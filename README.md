@@ -74,11 +74,11 @@ To test the API endpoints, follow these steps:
 
 ### Endpoints Overview
 
-- **POST**: `{{url}}/auth/signup` - Sign up a new user.
-- **POST**: `{{url}}/auth/login` - Log in to obtain a token.
-- **POST (auth required)**: `{{url}}/users` - Create a new user.
-- **GET (auth required)**: `{{url}}/users` - Get a list of all users.
-- **GET (auth required)**: `{{url}}/users/:id` - Get a user by their ID.
+- **POST**: `http://localhost:3000/api/v1/auth/signup` - Sign up a new user.
+- **POST**: `http://localhost:3000/api/v1/auth/login` - Log in to obtain a token.
+- **POST (auth required)**: `http://localhost:3000/api/v1/add-user` - Create a new user.
+- **GET (auth required)**: `http://localhost:3000/api/v1/all-users` - Get a list of all users.
+- **GET (auth required)**: `http://localhost:3000/api/v1//get-user/:id` - Get a user by their ID.
 - 
 ## 5. Summary
 

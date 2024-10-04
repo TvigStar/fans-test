@@ -84,12 +84,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/users",
+							"raw": "{{url}}/add-user",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"users"
+								"add-user"
 							]
 						}
 					},
@@ -101,12 +101,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/users",
+							"raw": "{{url}}/all-users",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"users"
+								"all-users"
 							]
 						}
 					},
@@ -118,18 +118,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/users/:id",
+							"raw": "{{url}}/get-user/:id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"users",
+								"get-user",
 								":id"
 							],
 							"variable": [
 								{
 									"key": "id",
-									"value": "1",
+									"value": "3",
 									"description": "userId"
 								}
 							]
@@ -143,7 +143,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4MDQ4OTYwfQ.AFbOwZL5I4SCw9k2FDpMH01_zXpjAOtA2MtpCGkDxL4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI4MDUxMDQ0fQ.a4T_TPX3JgCCz8d7HnwAfRcs-Rl9j2qO4rFEcDy_-Fs",
 						"type": "string"
 					}
 				]
@@ -197,7 +197,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "http://localhost:3000/api",
+			"value": "http://localhost:3000/api/v1",
 			"type": "string"
 		}
 	]

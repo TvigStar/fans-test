@@ -15,7 +15,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './entities/user.entity';
 
 @UseGuards(AuthGuard('jwt'))
-@Controller('users')
+@Controller()
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -25,7 +25,7 @@ export class UserController {
    * @returns {Promise<{ message: string; data: User }>} - Returns a message and the created user data.
    * @throws {HttpException} - Throws a Bad Request exception if user creation fails.
    */
-  @Post()
+  @Post('add-user')
   async createUser(
     @Body() user: CreateUserDto,
   ): Promise<{ message: string; data: User }> {
@@ -53,7 +53,7 @@ export class UserController {
    * Retrieves a list of all users.
    * @returns {Promise<User[]>} - Returns a list of users.
    */
-  @Get()
+  @Get('all-users')
   getUsers(): Promise<User[]> {
     return this.userService.getUsers();
   }
@@ -64,7 +64,7 @@ export class UserController {
    * @returns {Promise<User>} - Returns the user with the specified ID.
    * @throws {NotFoundException} - Throws an error if the user is not found.
    */
-  @Get(':id')
+  @Get('get-user/:id')
   async getUser(@Param('id') id: string): Promise<User> {
     const user = await this.userService.getUserById(id);
 
